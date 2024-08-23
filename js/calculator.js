@@ -1,22 +1,26 @@
+ // map
+ window.addEventListener('load', function(){
+  ymaps.ready(init);
+  function init() {
+          var myMap = new ymaps.Map("map-road", {
+              center: [55.745508, 37.435225],
+              zoom: 6,
+              controls: ['trafficControl', 'fullscreenControl'],
+              
+          });
+          // myPlacemark = new ymaps.Placemark([55.745508, 37.435225], {}, {
+          //     iconLayout: 'default#image',
+          //     iconImageHref: "img/contact-placemark.svg",
+          //     iconImageSize: [86, 109],
+          // });
+      
+          // myMap.geoObjects.add(myPlacemark)
+  
+  }
+})
 document.addEventListener('DOMContentLoaded', function(){
-        // map
-        ymaps.ready(init);
-        function init() {
-                var myMap = new ymaps.Map("map-road", {
-                    center: [55.745508, 37.435225],
-                    zoom: 6,
-                    controls: ['trafficControl', 'fullscreenControl'],
-                    
-                });
-                // myPlacemark = new ymaps.Placemark([55.745508, 37.435225], {}, {
-                //     iconLayout: 'default#image',
-                //     iconImageHref: "img/contact-placemark.svg",
-                //     iconImageSize: [86, 109],
-                // });
-            
-                // myMap.geoObjects.add(myPlacemark)
+       
         
-        }
         // select 
         var selectContainer = document.querySelectorAll(".select-container");
         selectContainer.forEach(s=>{
