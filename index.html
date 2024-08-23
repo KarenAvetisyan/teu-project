@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>MR. TEU</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Put your description here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- crytical --><style>.sc-banner{min-height: 100vh; background-image: url(img/banner-bg.webp);background-size: cover; background-position: center bottom;position: relative;}@media (max-width: 767px){.sc-banner{min-height: auto; padding-top: 60%; }}</style>
+    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- баннер  -->
+        <section class="sc-banner">
+            <h1 style="display: none">Заголовок для сео</h1>
+        </section>
+        <!-- хедер  -->
+        <header class="header">
+            <div class="container">
+                <div class="head__wrap">
+                    <div class="logo"><a href="#"><img src="logo.svg" alt="logo"></a></div>
+                    <nav>
+                        <ul class="navbar">
+                            <li><a class="nav__link js-scroll" href="#about">О нас</a></li>
+                            <li><a class="js-scroll" href="#services-prices" onclick="event.preventDefault()">Услуги и цены</a>
+                                <ul>
+                                    <li><a href="#">Контейнерные перевозки</a></li>
+                                    <li><a href="#">Негабаритные перевозки</a></li>
+                                    <li><a href="#">Таможенные услуги</a></li>
+                                    <li><a href="#">Автомобильные перевозки</a></li>
+                                    <li><a href="#">Сборные грузы</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav__link js-scroll" href="#clients">Наши клиенты</a></li>
+                            <li><a class="nav__link js-scroll" href="#contacts">Контакты</a></li>
+                        </ul>
+                        <a href="#" class="order__btn primary--btn" data-id="my-modal" data-show-modal="">Оставить заявку</a>
+                    </nav>
+                    <div class="d-mx-lg">
+                        <div class="burger js-burger">
+                            <span></span>
+                        </div>
+                        <div class="nav__overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Наш транспорт -->
+        <section class="sc-transport" id="services-prices">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 title">
+                        <div class="row">
+                            <div class="col-md-6 col-5">
+                                <h2>Наш транспорт</h2>
+                            </div>
+                            <div class="col-md-6 col-7">
+                                <p class="subtitle d-mn-md">В нашем автопарке более 
+                                    200 единиц грузовой техники</p>
+                                <p class="subtitle d-mx-md">В нашем автопарке 120 газелей, 80 манипуляторов, 40 боортовых полуприцепов, 20 контейнеровозов</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 transport__list-col">
+                <div class="transport__list">
+                    <div class="transport">
+                         <div class="img__box">
+                            <img src="img/malotonnajnii.webp" alt="malotonnajnii">
+                         </div>
+                        <div class="info__box">
+                            <div class="tr__title">Малотоннажный</div>
+                            <div class="tr__description">от 1 до 10 тонн</div>
+                        </div>
+                    </div>
+                    <div class="transport">
+                         <div class="img__box">
+                            <img src="img/manipulyatori.webp" alt="manipulyatori">
+                         </div>
+                        <div class="info__box">
+                            <div class="tr__title">Манипуляторы</div>
+                            <div class="tr__description">от 5 до 12,5 тонн</div>
+                        </div>
+                    </div>
+                    <div class="transport">
+                         <div class="img__box">
+                            <img src="img/bortovie.webp" alt="bortovie">
+                         </div>
+                        <div class="info__box">
+                            <div class="tr__title">Бортовые</div>
+                            <div class="tr__description">2-х или 3-х осные тягачи</div>
+                        </div>
+                    </div>
+                    <div class="transport">
+                         <div class="img__box">
+                            <img src="img/konteynerovozi.webp" alt="konteynerovozi">
+                         </div>
+                        <div class="info__box">
+                            <div class="tr__title">Контейнеровозы</div>
+                            <div class="tr__description">20, 40, 40 HQ</div>
+                        </div>
+                    </div>
+                    <div class="transport">
+                         <div class="img__box">
+                            <img src="img/tenti.webp" alt="tenti">
+                         </div>
+                        <div class="info__box">
+                            <div class="tr__title">Тенты</div>
+                            <div class="tr__description">20, 40, 40 HQ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- География перевозок -->
+        <section class="sc-geography">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 title">
+                        <div class="row">
+                            <div class="col-md-6 col-7">
+                                <p class="subtitle">Мы работаем по всей России
+                                    и ЕАЭС. Перевозим Ваши грузы 
+                                    от Новороссийска до Владивостока</p>
+                            </div>
+                            <div class="col-md-6 col-5">
+                                <h2>География перевозок</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="map__box">
+                            <img loading="lazy" src="img/map.svg" alt="карта">
+                            <div class="tip t__1">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__2">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__3">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__4">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__5">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__6">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__7">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__8">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__9">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__10">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__11">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__12">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__13">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__14">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__15">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__16">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__17">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__18">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__19">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip t__20">
+                                <div class="dot"></div>
+                                <div class="tip__box">
+                                    <div class="img__box"><img loading="lazy" src="img/kreml.webp" alt="кремль"></div>
+                                    <div class="info__box">
+                                        <div class="tip__title">Москва</div>
+                                        <div class="tip__description">
+                                            <a href="#">Рассчитать контейнерную перевозку из этой точки&nbsp;<i class="icon-caret"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Таможенное оформление -->
+        <section class="sc-customs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-mob-2">
+                        <div class="img__box">
+                            <img loading="lazy" src="img/customs.webp" alt="Таможенное оформление">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-mob-1">
+                        <div class="info__box">
+                            <h2>Таможенное
+                                оформление</h2>
+                            <div class="subtitle">Также мы оказываем весь перечень услуг таможенного оформления товаров и грузов под ключ с полной документацией. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Почему мы?  -->
+        <section class="sc-why-we" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 title">
+                        <div class="row">
+                            <div class="col-md-5 pr__0">
+                                <h2>Почему мы?</h2>
+                            </div>
+                            <div class="col-md-7">
+                                <p class="subtitle">
+                                    Большой опыт грузоперевозок по всей РФ, 
+                                    Разнообразие нового грузового транспорта,
+                                    Гарантия безопасности Вашего груза.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="info__box">
+                            <div class="single__info">
+                                <div class="info__title">
+                                    <h4>Все виды контейнеров</h4>
+                                </div>
+                                <div class="info__details">
+                                    <div class="sizes">
+                                        <div class="size__box">
+                                            <div class="size__img small"><img loading="lazy" src="img/cont.svg" alt="20 футов"></div>
+                                            <span>20 футов</span>
+                                        </div>
+                                        <div class="size__box">
+                                            <div class="size__img"><img loading="lazy" src="img/cont.svg" alt="40/45 футов"></div>
+                                            <span>40/45 футов</span>
+                                        </div>
+                                        <div class="size__box">
+                                            <div class="size__img"><img loading="lazy" src="img/cont.svg" alt="HQ"></div>
+                                            <span>HQ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single__info">
+                                <div class="info__title">
+                                    <h4>Комплексные перевозки</h4>
+                                </div>
+                                <div class="info__details">
+                                    <p>текст<br>
+                                        текст<br>
+                                        текст</p>
+                                </div>
+                            </div>
+                            <div class="single__info">
+                                <div class="info__title">
+                                    <h4>24/7 на связи</h4>
+                                </div>
+                                <div class="info__details">
+                                    <p>индивидуальный и гибкий подход к каждому заказу, с учетом особенностей и требований клиента.</p>
+                                </div>
+                            </div>
+                            <div class="single__info">
+                                <div class="info__title">
+                                    <h4>Гибкий подход</h4>
+                                </div>
+                                <div class="info__details">
+                                    <p>индивидуальный и гибкий подход к каждому заказу, с учетом особеннос-тей и требований клиента.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form__box">
+                            <form>
+                                <div class="form__body">
+                                    <div class="field">
+                                        <input type="text" placeholder="Имя">
+                                    </div>
+                                    <div class="field">
+                                        <input type="tel" class="js-tel__mask" placeholder="Телефон">
+                                    </div>
+                                    <input class="submit" type="submit" value="Оставить заявку">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Благодарности   -->
+        <section class="sc-thanks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper__box">
+                            <div class="swiper thanksSwiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-1.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-2.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-1.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-2.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-1.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-2.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-1.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-2.webp" alt="Сертификат"></div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img__box"><img loading="lazy" src="img/thanks-paper-1.webp" alt="Сертификат"></div>
+                                  </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Наши клиенты  -->
+        <section class="sc-clients" id="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="title">
+                            <h2>Наши клиенты</h2>
+                            <p class="subtitle">Нам доверяют крупнейшие компании России! 
+                                И регулярно заказывают услуги.</p>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="row">
+                            <div class="col-6 cl__col"><div class="client__logo"><img loading="lazy" src="img/tk-irbis.svg" alt="ТКИРБИС"></div></div>
+                            <div class="col-6 cl__col"><div class="client__logo"><img loading="lazy" src="img/ochakovski.svg" alt="Очаковский"></div></div>
+                            <div class="col-6 cl__col"><div class="client__logo"><img loading="lazy" src="img/propoint.svg" alt="propoint"></div></div>
+                            <div class="col-6 cl__col"><div class="client__logo"><img loading="lazy" src="img/sts-logistica.svg" alt="стс-логистика"></div></div>
+                            <div class="col-6 cl__col"><div class="client__logo"><img loading="lazy" src="img/pps-neftyanaya.svg" alt="ппс-нефтяная"></div></div>
+                            <div class="col-6 cl__col"><div class="client__logo"><img loading="lazy" src="img/nawinia.svg" alt="nawinia"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer  -->
+        <footer class="footer" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-6">
+                        <div class="address__box">
+                            <h4>Адрес</h4>
+                            <p>Россия, 119361, Москва,<br>
+                                ул. Наташи Ковшовой, 14с2</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                        <div class="contact__box">
+                            <h4>Контакты</h4>
+                            <a href="tel:+74951913676"><i><img loading="lazy" src="img/ws-icon.svg" alt="whatsupp"></i> <span>+7 495 191-36-76</span></a>
+                            <a href="mailto:mr@teu.express"><i><img loading="lazy" src="img/mail-icon.svg" alt="email"></i> <span>mr@teu.express</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="f__custom">
+                            <ul class="f__nav">
+                                <li><a class="nav__link js-scroll" href="#about">О компании</a></li>
+                                <li><a href="/" onclick="event.preventDefault()">Услуги и цены</a>
+                                    <ul>
+                                        <li><a href="#">Контейнерные перевозки</a></li>
+                                        <li><a href="#">Негабаритные перевозки</a></li>
+                                        <li><a href="#">Таможенные услуги</a></li>
+                                        <li><a href="#">Автомобильные перевозки</a></li>
+                                        <li><a href="#">Сборные грузы</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="text__info">
+                                <p>ИП Новикова Мария Александровна<br>
+                                    ИНН 773182730784 / ОГРНИП 321774600417240
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="#">Политика обработки персональных данных</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p class="t-r">2024 © все права защищены</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>
+
+    <!-- modal  -->
+    <div class="modal" id="my-modal">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="m-container">
+            <div class="m-close" data-close-modal></div>
+            <div class="m-content">
+                <div class="form__title">
+                    <h2>Хотите сделать заказ?</h2>
+                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                </div>
+                <div class="form__box">
+                    <form>
+                        <div class="form__body">
+                            <div class="field">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="field">
+                                <input type="tel" class="js-tel__mask" placeholder="Телефон">
+                            </div>
+                            <input class="submit" type="submit" value="Оставить заявку">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script><!-- скрипты только для этой страницы -->
+</body>
+</html>
+

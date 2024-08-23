@@ -1,0 +1,290 @@
+.sc-transportation {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 82px;
+}
+.sc-transportation .transportation__head {
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+.sc-transportation .title {
+  position: relative;
+  margin-bottom: 20px;
+}
+.sc-transportation .img__box {
+  margin-left: auto;
+  width: 1075px;
+  position: absolute;
+  right: -24%;
+  top: -147px;
+  z-index: -1;
+}
+.sc-transportation .img__box img {
+  max-width: 100%;
+}
+.sc-transportation h4 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 142%;
+  color: #192D36;
+  margin-bottom: 30px;
+}
+.sc-transportation .custom__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 142%;
+  line-height: 166%;
+  margin-bottom: 40px;
+}
+.sc-transportation .info__box ul {
+  padding-left: 20px;
+  font-weight: 300;
+  line-height: 166%;
+  margin-bottom: 40px;
+}
+.sc-transportation .info__box ul li {
+  margin-bottom: 30px;
+}
+.sc-transportation .info__box ul strong {
+  font-weight: 500;
+}
+.sc-transportation .table__box table {
+  border-spacing: 0;
+  border-bottom: solid 1px var(--dark-blue);
+}
+.sc-transportation .table__box thead {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+.sc-transportation .table__box thead th {
+  border-right: 1px solid #192D36;
+  border-bottom: 1px solid #192D36;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+.sc-transportation .table__box thead th:first-of-type {
+  border-right: none;
+}
+.sc-transportation .table__box thead th:last-of-type {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 20px;
+}
+.sc-transportation .table__box thead .red {
+  color: var(--red);
+}
+.sc-transportation .table__box tbody {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: solid 1px var(--dark-blue);
+}
+.sc-transportation .table__box tbody tr:first-of-type th, .sc-transportation .table__box tbody tr:first-of-type td {
+  padding-top: 30px;
+}
+.sc-transportation .table__box tbody tr:last-of-type th, .sc-transportation .table__box tbody tr:last-of-type td {
+  padding-bottom: 30px;
+}
+.sc-transportation .table__box tbody th {
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-content: baseline;
+}
+.sc-transportation .table__box tbody td {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-content: baseline;
+  border-right: solid 1px var(--dark-blue);
+}
+.sc-transportation .table__box tbody td:last-of-type {
+  border: none;
+}
+.sc-transportation .table__bottom {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.sc-transportation .table__bottom p {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.sc-transportation .table__bottom p strong, .sc-transportation .table__bottom p span {
+  width: 47%;
+}
+.sc-transportation .table__bottom p span {
+  text-align: center;
+}
+.sc-transportation .table__tip {
+  font-weight: 400;
+  font-size: 11px;
+  color: #192D36;
+  opacity: 0.56;
+}
+
+@media (max-width: 1350px) {
+  .sc-transportation .img__box {
+    width: 975px;
+  }
+  .sc-transportation h4 {
+    font-size: 21px;
+  }
+  .sc-transportation .table__box {
+    margin-bottom: 20px;
+  }
+  .sc-transportation .table__box tbody th {
+    padding-right: 19px;
+  }
+}
+@media (max-width: 991px) {
+  .sc-transportation .title {
+    margin-bottom: 10px;
+  }
+  .sc-transportation .img__box {
+    right: -60%;
+    width: 864px;
+  }
+}
+@media (max-width: 767px) {
+  .sc-transportation {
+    padding-bottom: 36px;
+  }
+  .sc-transportation .transportation__head {
+    padding-top: 59px;
+    padding-bottom: 0;
+  }
+  .sc-transportation .custom__text {
+    font-size: 14px;
+  }
+  .sc-transportation h4 {
+    font-size: 16px;
+  }
+  .sc-transportation h4 br {
+    display: none;
+  }
+  .sc-transportation .info__box ul {
+    font-size: 13px;
+  }
+  .sc-transportation .table__box .table__overflow {
+    overflow: auto;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .sc-transportation .table__box table {
+    width: 564px;
+  }
+  .sc-transportation .table__box thead {
+    font-size: 15px;
+  }
+  .sc-transportation .table__box tbody {
+    font-size: 14px;
+  }
+  .sc-transportation .table__bottom {
+    font-size: 14px;
+  }
+}
+.form--box {
+  display: block;
+  margin-left: auto;
+  max-width: 422px;
+  width: 100%;
+  background-color: var(--dark-blue);
+  padding: 42px 45px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.form--box .form__title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-bottom: 36px;
+}
+.form--box .field {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.form--box .field input {
+  width: 100%;
+  outline: none;
+  height: 91px;
+  background-color: transparent;
+  padding: 0 23px;
+  border: solid 1px rgba(255, 255, 255, 0.301);
+  font-family: "Unbounded";
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.form--box .submit {
+  background-color: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 33px 40px;
+  width: 100%;
+  font-family: "Unbounded";
+  min-height: 80px !important;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form--box .submit:hover {
+  opacity: 0.7;
+}
+.form--box .agree {
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.199);
+}
+.form--box .agree a {
+  color: rgba(255, 255, 255, 0.199);
+  text-decoration: none;
+}
+.form--box .agree a:hover {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .form--box {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .form--box {
+    padding: 35px 20px;
+  }
+  .form--box .form__title {
+    font-size: 26px;
+    line-height: 33px;
+    margin-bottom: 24px;
+  }
+  .form--box .field input {
+    height: 63px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .form--box .select-container .select {
+    height: 63px;
+  }
+  .form--box .submit {
+    padding: 15px 20px;
+    min-height: 63px !important;
+    font-size: 15px;
+  }
+}

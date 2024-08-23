@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>MR. TEU - Калькулятор перевозки</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Put your description here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/calculator.css"><!-- Стили блока калкулятора -->
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- хедер  -->
+        <header class="header">
+            <div class="container">
+                <div class="head__wrap">
+                    <div class="logo"><a href="#"><img src="logo.svg" alt="logo"></a></div>
+                    <nav>
+                        <ul class="navbar">
+                            <li><a class="nav__link js-scroll" href="#about">О нас</a></li>
+                            <li><a class="js-scroll" href="#services-prices" onclick="event.preventDefault()">Услуги и цены</a>
+                                <ul>
+                                    <li><a href="#">Контейнерные перевозки</a></li>
+                                    <li><a href="#">Негабаритные перевозки</a></li>
+                                    <li><a href="#">Таможенные услуги</a></li>
+                                    <li><a href="#">Автомобильные перевозки</a></li>
+                                    <li><a href="#">Сборные грузы</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav__link js-scroll" href="#clients">Наши клиенты</a></li>
+                            <li><a class="nav__link js-scroll" href="#contacts">Контакты</a></li>
+                        </ul>
+                        <a href="#" class="order__btn primary--btn" data-id="my-modal" data-show-modal="">Оставить заявку</a>
+                    </nav>
+                    <div class="d-mx-lg">
+                        <div class="burger js-burger">
+                            <span></span>
+                        </div>
+                        <div class="nav__overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Контакты  -->
+        <section class="sc-calculator">
+            <div class="calc__head">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="breadcrumb">
+                                <li><a href="/">Главная</a></li>
+                                <li>Калькулятор доставки</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 title">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1>Калькулятор перевозки</h1>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img__box d-mn-md">
+                                        <img loading="lazy" src="img/container.webp" alt="контайнер">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 calculator--box">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="calc__body">
+                                    <div class="map__box">
+                                        <div id="map-road"></div>
+                                    </div>
+                                    <div class="select__wrap">
+                                        <div class="select-container autoWidth">
+                                            <div class="select">
+                                                <div class="hidden-autoResizeInput"></div>
+                                                <input type="text" class="select-input" placeholder="Город" value="Москва" required onfocus="this.blur();">
+                                                <i class="caret"></i>
+                                            </div>
+                                            <div class="option-container">
+                                                <div class='option selected'><label>Москва</label></div>
+                                                <div class='option'><label>Санкт-Петербург</label></div>
+                                                <div class='option'><label>Казань</label></div>
+                                                <div class='option'><label>Новосибирск</label></div>
+                                                <div class='option'><label>Екатеринбург</label></div>
+                                                <div class='option'><label>Нижний Новгород</label></div>
+                                                <div class='option'><label>Самара</label></div>
+                                                <div class='option'><label>Омск</label></div>
+                                                <div class='option'><label>Челябинск</label></div>
+                                            </div>
+                                        </div>
+                                        <i class="arrow"><img loading="lazy" src="img/long-arrow.svg" alt="arrow"></i>
+                                        <div class="select-container autoWidth">
+                                            <div class="select">
+                                                <div class="hidden-autoResizeInput"></div>
+                                                <input type="text" class="select-input" placeholder="Город" value="Санкт-Петербург" required onfocus="this.blur();">
+                                                <i class="caret"></i>
+                                            </div>
+                                            <div class="option-container">
+                                                <div class='option'><label>Москва</label></div>
+                                                <div class='option selected'><label>Санкт-Петербург</label></div>
+                                                <div class='option'><label>Казань</label></div>
+                                                <div class='option'><label>Новосибирск</label></div>
+                                                <div class='option'><label>Екатеринбург</label></div>
+                                                <div class='option'><label>Нижний Новгород</label></div>
+                                                <div class='option'><label>Самара</label></div>
+                                                <div class='option'><label>Омск</label></div>
+                                                <div class='option'><label>Челябинск</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="transport__type">
+                                        <p class="field__title">Выберите тип транспорта</p>
+                                        <div class="select-container">
+                                            <div class="select">
+                                                <input type="text" class="select-input" placeholder="Тип транспорта" value="" required onfocus="this.blur();">
+                                                <i class="caret"></i>
+                                            </div>
+                                            <div class="option-container">
+                                                <div class='option'><label>Автозапчасти</label></div>
+                                                <div class='option'><label>Аккумулятор</label></div>
+                                                <div class='option'><label>Алкогольная продукция</label></div>
+                                                <div class='option'><label>Аудиотехника</label></div>
+                                                <div class='option'><label>Бытовая техника</label></div>
+                                                <div class='option'><label>Бытовая химия</label></div>
+                                                <div class='option'><label>Двери</label></div>
+                                                <div class='option'><label>Детские товары</label></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container__type">
+                                        <p class="field__title">Вид контейнера</p>
+                                        <div class="container__wrap">
+                                            <label class="size__label">
+                                                <div class="size__img"><img loading="lazy" width="64" src="img/cont.svg" alt="20 футов"></div>
+                                                <input type="radio" name="containerType" required>
+                                                <span>20 футов</span>
+                                            </label>
+                                            <label class="size__label">
+                                                <div class="size__img"><img loading="lazy" width="74" src="img/cont.svg" alt="40/45 футов"></div>
+                                                <input type="radio" name="containerType" checked required>
+                                                <span>40/45 футов</span>
+                                            </label>
+                                            <label class="size__label">
+                                                <div class="size__img"><img loading="lazy" width="74" src="img/cont.svg" alt="HQ"></div>
+                                                <input type="radio" name="containerType" required>
+                                                <span>HQ</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="units">
+                                        <p class="field__title">Сколько единиц техники</p>
+                                        <div class="quantity">
+                                            <button class="js-decrease decrease">-</button>
+                                            <input type="number" id="number" placeholder="0">
+                                            <button class="js-increase increase">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="services">
+                                        <h4>Дополнительные услуги:</h4>
+                                        <div class="service__box">
+                                            <label class="switch">
+                                                <input type="checkbox" value="Экспедирование (пересчет мест, сверка груза)">
+                                                <div class="slider round"></div>
+                                            </label>
+                                            <p>Экспедирование (пересчет мест, сверка груза)</p>
+                                        </div>
+                                        <div class="service__box">
+                                            <label class="switch">
+                                                <input type="checkbox" value="Погрузо/ Разгрузочные работы">
+                                                <div class="slider round"></div>
+                                            </label>
+                                            <p>Погрузо/ Разгрузочные работы</p>
+                                        </div>
+                                        <div class="service__box">
+                                            <label class="switch">
+                                                <input type="checkbox" value="Отправка/ Возврат сопроводительных документов">
+                                                <div class="slider round"></div>
+                                            </label>
+                                            <p>Отправка/ Возврат сопроводительных документов</p>
+                                        </div>
+                                        <div class="service__box">
+                                            <label class="switch">
+                                                <input type="checkbox" value="Экспресс доставка">
+                                                <div class="slider round"></div>
+                                            </label>
+                                            <p>Экспресс доставка</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- не актывным - есть класс disactive -->
+                                <div class="calc--form disactive">
+                                    <div class="disactive__text">
+                                        Выберите тип транспорта и заполните данные, чтобы узнать сроки и цену на перевозку
+                                    </div>
+                                    <form>
+                                        <div class="field">
+                                            <input type="text" placeholder="Ваше имя" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="tel" class="js-tel__mask" placeholder="Телефон" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="email" placeholder="E-mail" required>
+                                        </div>
+                                        <input type="submit" value="Оставить заявку" class="submit">
+                                        <div class="result">
+                                            <div class="price">
+                                                <div class="price__text">156 468₽</div>
+                                                <input type="hidden" value="156 468₽"><!-- скрытые значение свойство -->
+                                            </div>
+                                            <div class="transport">
+                                                <div class="transport__text">перевозка контейнером 40 футов Москва - Санкт-Петербург</div>
+                                                <input type="hidden" value="перевозка контейнером 40 футов Москва - Санкт-Петербург"><!-- скрытые значение свойство -->
+                                            </div>
+                                            <ul class="details">
+                                                <li><span>Вес груза</span><span>+36 108 ₽</span> <input type="hidden" value="+36 108 ₽"></li>
+                                                <li><span>Объем</span><span>+24 072 ₽</span> <input type="hidden" value="+24 072 ₽"></li>
+                                                <li><span>Погрузо/ Разгрузочные работы</span><span>+6 144 ₽</span> <input type="hidden" value="+6 144 ₽"></li>
+                                                <li><span>Экспресс доставка</span><span>+48 144 ₽</span> <input type="hidden" value="+48 144 ₽"></li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- актывным - без класса disactive -->
+                                <div class="calc--form">
+                                    <form>
+                                        <div class="field">
+                                            <input type="text" placeholder="Ваше имя" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="tel" class="js-tel__mask" placeholder="Телефон" required>
+                                        </div>
+                                        <div class="field">
+                                            <input type="email" placeholder="E-mail" required>
+                                        </div>
+                                        <input type="submit" value="Оставить заявку" class="submit">
+                                        <div class="result">
+                                            <div class="price">
+                                                <div class="price__text">156 468₽</div>
+                                                <input type="hidden" value="156 468₽"><!-- скрытые значение свойство -->
+                                            </div>
+                                            <div class="transport">
+                                                <div class="transport__text">перевозка контейнером 40 футов Москва - Санкт-Петербург</div>
+                                                <input type="hidden" value="перевозка контейнером 40 футов Москва - Санкт-Петербург"><!-- скрытые значение свойство -->
+                                            </div>
+                                            <ul class="details">
+                                                <li><span>Вес груза</span><span>+36 108 ₽</span> <input type="hidden" value="+36 108 ₽"></li>
+                                                <li><span>Объем</span><span>+24 072 ₽</span> <input type="hidden" value="+24 072 ₽"></li>
+                                                <li><span>Погрузо/ Разгрузочные работы</span><span>+6 144 ₽</span> <input type="hidden" value="+6 144 ₽"></li>
+                                                <li><span>Экспресс доставка</span><span>+48 144 ₽</span> <input type="hidden" value="+48 144 ₽"></li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="custom__info">
+                            <h3>Контейнерные перевозки по всей России и ЕАЭС</h3>
+                            <p>Наша компания предлагает надежные и эффективные решения для контейнерных перевозок по всей России и странам ЕАЭС. Мы гарантируем безопасную доставку ваших грузов в кратчайшие сроки. Стабильность, безопасность и оперативность — вот ключевые принципы, на которых строится наша работа. Мы стремимся предоставить вам лучший сервис, избавив от всех хлопот, связанных с логистикой. Свяжитесь с нами, чтобы узнать больше о наших услугах и получить индивидуальное предложение для вашего бизнеса. Мы готовы стать вашим надежным партнером в мире грузоперевозок!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer  -->
+        <footer class="footer" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-6">
+                        <div class="address__box">
+                            <h4>Адрес</h4>
+                            <p>Россия, 119361, Москва,<br>
+                                ул. Наташи Ковшовой, 14с2</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                        <div class="contact__box">
+                            <h4>Контакты</h4>
+                            <a href="tel:+74951913676"><i><img loading="lazy" src="img/ws-icon.svg" alt="whatsupp"></i> <span>+7 495 191-36-76</span></a>
+                            <a href="mailto:mr@teu.express"><i><img loading="lazy" src="img/mail-icon.svg" alt="email"></i> <span>mr@teu.express</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="f__custom">
+                            <ul class="f__nav">
+                                <li><a class="nav__link js-scroll" href="#about">О компании</a></li>
+                                <li><a href="/" onclick="event.preventDefault()">Услуги и цены</a>
+                                    <ul>
+                                        <li><a href="#">Контейнерные перевозки</a></li>
+                                        <li><a href="#">Негабаритные перевозки</a></li>
+                                        <li><a href="#">Таможенные услуги</a></li>
+                                        <li><a href="#">Автомобильные перевозки</a></li>
+                                        <li><a href="#">Сборные грузы</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="text__info">
+                                <p>ИП Новикова Мария Александровна<br>
+                                    ИНН 773182730784 / ОГРНИП 321774600417240
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="#">Политика обработки персональных данных</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p class="t-r">2024 © все права защищены</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>
+
+    <!-- modal  -->
+    <div class="modal" id="my-modal">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="m-container">
+            <div class="m-close" data-close-modal></div>
+            <div class="m-content">
+                <div class="form__title">
+                    <h2>Хотите сделать заказ?</h2>
+                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                </div>
+                <div class="form__box">
+                    <form>
+                        <div class="form__body">
+                            <div class="field">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="field">
+                                <input type="tel" class="js-tel__mask" placeholder="Телефон">
+                            </div>
+                            <input class="submit" type="submit" value="Оставить заявку">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.route&amp;lang=ru-RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="js/calculator.js"></script><!-- скрипты блока калкулятора -->
+</body>
+</html>
+

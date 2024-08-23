@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>MR. TEU - Контакты</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Put your description here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="css/grid.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/page-contact.css"><!-- Стили только для этой страницы -->
+</head>
+<body>
+
+    <div id="wrapper">
+        <!-- хедер  -->
+        <header class="header">
+            <div class="container">
+                <div class="head__wrap">
+                    <div class="logo"><a href="#"><img src="logo.svg" alt="logo"></a></div>
+                    <nav>
+                        <ul class="navbar">
+                            <li><a class="nav__link js-scroll" href="#about">О нас</a></li>
+                            <li><a class="js-scroll" href="#services-prices" onclick="event.preventDefault()">Услуги и цены</a>
+                                <ul>
+                                    <li><a href="#">Контейнерные перевозки</a></li>
+                                    <li><a href="#">Негабаритные перевозки</a></li>
+                                    <li><a href="#">Таможенные услуги</a></li>
+                                    <li><a href="#">Автомобильные перевозки</a></li>
+                                    <li><a href="#">Сборные грузы</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav__link js-scroll" href="#clients">Наши клиенты</a></li>
+                            <li><a class="nav__link js-scroll" href="#contacts">Контакты</a></li>
+                        </ul>
+                        <a href="#" class="order__btn primary--btn" data-id="my-modal" data-show-modal="">Оставить заявку</a>
+                    </nav>
+                    <div class="d-mx-lg">
+                        <div class="burger js-burger">
+                            <span></span>
+                        </div>
+                        <div class="nav__overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Контакты  -->
+        <section class="sc-contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="breadcrumb">
+                            <li><a href="/">Главная</a></li>
+                            <li>Контакты</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <h1>Контакты</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="map__box">
+                <div class="container">
+                    <div class="contact__box">
+                        <a href="tel:+74951913676" class="tel">+7 (495) 191-36-76</a>
+                        <a class="whatsapp" target="_blank" href="https://wa.me/74951913676"><i class="icon"><img src="img/whatsapp.svg" alt="WhatsApp"></i>WhatsApp</a>
+                        <div class="small__contact-box">
+                            <span class="text__label">Адрес</span>
+                            <p>Россия, 119361, Москва, ул. Наташи Ковшовой, 14с2</p>
+                        </div>
+                        <div class="small__contact-box">
+                            <span class="text__label">E-mail</span>
+                            <p><a href="mailto:mr@teu.express">mr@teu.express</a></p>
+                        </div>
+                        <div class="small__contact-box">
+                            <span class="text__label">Режим работы:</span>
+                            <p>офисный 9:00 — 18:00</p>
+                        </div>
+                        <div>
+                            <a href="#" class="download">Скачать реквизиты</a>
+                            <p class="ie">ИП Новикова Мария Александровна<br>
+                                ИНН 773182730784 / ОГРНИП 321774600417240</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+            <div class="container">
+                <div class="contact__form">
+                    <h3>Обратная связь</h3>
+                    <form>
+                        <div class="field__wrap">
+                            <div class="field__box">
+                                <input class="js-field" type="text" required>
+                                <div class="field__holder">Фамилия Имя Отчество</div>
+                            </div>
+                            <div class="field__box">
+                                <input class="js-field" type="text" required>
+                                <div class="field__holder">Компания</div>
+                            </div>
+                            <div class="field__box">
+                                <input class="js-field js-tel__mask" type="tel" id="phone" required>
+                                <div class="field__holder">Телефон</div>
+                            </div>
+                            <div class="field__box">
+                                <input class="js-field" type="email" required>
+                                <div class="field__holder">E-mail</div>
+                            </div>
+                        </div>
+                        <div class="field__box">
+                            <textarea class="js-field"></textarea>
+                            <div class="field__holder">Сообщение</div>
+                        </div>
+                        <div class="file__field-box">
+                            <ul class="fileList"></ul>
+                            <label class="files" for="file" id="files">
+                                  <input type="file" id="file" name="files" multiple>
+                                  <span class="js-file-holder file__holder"></span>
+                            </label>
+                        </div>
+                        <div class="submit__field">
+                            <input class="submit" type="submit" value="Отправить">
+                            <div class="agree">
+                                Нажимая кнопку «Отправить» вы подтверждаете, что ознакомились с <a href="#">политикой обработки персональных данных</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- footer  -->
+        <footer class="footer" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-6">
+                        <div class="address__box">
+                            <h4>Адрес</h4>
+                            <p>Россия, 119361, Москва,<br>
+                                ул. Наташи Ковшовой, 14с2</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                        <div class="contact__box">
+                            <h4>Контакты</h4>
+                            <a href="tel:+74951913676"><i><img loading="lazy" src="img/ws-icon.svg" alt="whatsupp"></i> <span>+7 495 191-36-76</span></a>
+                            <a href="mailto:mr@teu.express"><i><img loading="lazy" src="img/mail-icon.svg" alt="email"></i> <span>mr@teu.express</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="f__custom">
+                            <ul class="f__nav">
+                                <li><a class="nav__link js-scroll" href="#about">О компании</a></li>
+                                <li><a href="/" onclick="event.preventDefault()">Услуги и цены</a>
+                                    <ul>
+                                        <li><a href="#">Контейнерные перевозки</a></li>
+                                        <li><a href="#">Негабаритные перевозки</a></li>
+                                        <li><a href="#">Таможенные услуги</a></li>
+                                        <li><a href="#">Автомобильные перевозки</a></li>
+                                        <li><a href="#">Сборные грузы</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="text__info">
+                                <p>ИП Новикова Мария Александровна<br>
+                                    ИНН 773182730784 / ОГРНИП 321774600417240
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <p><a href="#">Политика обработки персональных данных</a></p>
+                        </div>
+                        <div class="col-6">
+                            <p class="t-r">2024 © все права защищены</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>
+
+    <!-- modal  -->
+    <div class="modal" id="my-modal">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="m-container">
+            <div class="m-close" data-close-modal></div>
+            <div class="m-content">
+                <div class="form__title">
+                    <h2>Хотите сделать заказ?</h2>
+                <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                </div>
+                <div class="form__box">
+                    <form>
+                        <div class="form__body">
+                            <div class="field">
+                                <input type="text" placeholder="Имя">
+                            </div>
+                            <div class="field">
+                                <input type="tel" class="js-tel__mask" placeholder="Телефон">
+                            </div>
+                            <input class="submit" type="submit" value="Оставить заявку">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/contact.js"></script><!-- скрипты только для этой страницы -->
+</body>
+</html>
+
