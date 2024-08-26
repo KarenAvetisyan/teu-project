@@ -176,12 +176,12 @@
 .calculator--box .container__type .size__label .size__img {
   flex-shrink: 0;
 }
-.calculator--box .container__type .size__label span {
+.calculator--box .container__type .size__label .ft {
   margin-left: 15px;
   padding-left: 32px;
   position: relative;
 }
-.calculator--box .container__type .size__label span:before {
+.calculator--box .container__type .size__label .ft:before {
   content: "";
   position: absolute;
   top: 0;
@@ -617,10 +617,11 @@
   }
   .calculator--box .select__wrap {
     margin-top: 21px;
+    padding-right: 0;
   }
   .calculator--box .select__wrap .select-container.autoWidth .select input,
   .calculator--box .select__wrap .select-container .hidden-autoResizeInput {
-    max-width: 110px;
+    max-width: 145px;
   }
   .calculator--box .select__wrap .select-container .select input,
   .calculator--box .select__wrap .select-container .hidden-autoResizeInput {

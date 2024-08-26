@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function(){
         function myFunction(x) {
             if (x.matches) {
                 var myMap = new ymaps.Map("map", {
-                    center: [55.679590, 37.450000],
+                    center: [55.679590, 37.446012],
                     zoom: 15,
                     controls: ['trafficControl', 'fullscreenControl'],
                     
                 });
             } else {
                 var myMap = new ymaps.Map("map", {
-                    center: [55.679199, 37.439113],
-                    zoom: 16,
+                    center: [55.679592, 37.440892],
+                    zoom: 17,
                     controls: ['trafficControl', 'fullscreenControl'],
                     
                 });
@@ -23,14 +23,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 iconLayout: 'default#image',
                 iconImageHref: "img/contact-placemark.svg",
                 iconImageSize: [86, 109],
-            });
-            myPlacemark2 = new ymaps.Placemark([55.679412, 37.451931 ], {}, {
-                iconLayout: 'default#image',
-                iconImageHref: "img/contact-placemark2.svg",
-                iconImageSize: [86, 109],
+                iconImageOffset: [-40, -80]
             });
             myMap.geoObjects.add(myPlacemark)
-            myMap.geoObjects.add(myPlacemark2)
           }
           
           // Create a MediaQueryList object
@@ -70,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function(){
             var output = [];
             for (var i = 0, f; f = evt.target.files[i]; i++) {
                 var removeLink = "<a class=\"removeFile\" href=\"#\" data-fileid=\"" + i + "\">×</a>";
-                output.push("<li><strong>", escape(f.name), "</strong>", removeLink, "</li> ");
+                output.push("<li><strong>",f.name, "</strong>", removeLink, "</li> ");
             }
             $(".fileList")
                 .append(output.join(""));
